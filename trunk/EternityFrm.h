@@ -64,6 +64,8 @@ class EternityFrm : public wxFrame
 		//GUI Control Declaration Start and GUI Control Declaration End.
 		//wxDev-C++ will remove them. Add custom code after the block.
 		////GUI Control Declaration Start
+		wxStaticText *WxStaticText6;
+		wxStaticText *WxStaticText5;
 		wxButton *Resolver;
 		wxListBox *WxListBox1;
 		wxStaticBox *WxStaticBox5;
@@ -91,6 +93,8 @@ class EternityFrm : public wxFrame
 		enum
 		{
 			////GUI Enum Control ID Start
+			ID_WXSTATICTEXT6 = 1022,
+			ID_WXSTATICTEXT5 = 1021,
 			ID_RESOLVER = 1020,
 			ID_WXLISTBOX1 = 1019,
 			ID_WXSTATICBOX5 = 1018,
