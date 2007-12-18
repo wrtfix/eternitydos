@@ -1,6 +1,6 @@
 object frmNewForm: TfrmNewForm
-  Left = 6
-  Top = -12
+  Left = 8
+  Top = 8
   AutoScroll = False
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Eternity'
@@ -107,7 +107,7 @@ object frmNewForm: TfrmNewForm
   object WxStaticText2: TWxStaticText
     Left = 35
     Top = 78
-    Width = 42
+    Width = 44
     Height = 17
     Caption = 'Colores:'
     TabOrder = 4
@@ -175,7 +175,7 @@ object frmNewForm: TfrmNewForm
   object WxStaticText4: TWxStaticText
     Left = 150
     Top = 142
-    Width = 34
+    Width = 35
     Height = 17
     Caption = 'Largo:'
     TabOrder = 8
@@ -324,7 +324,7 @@ object frmNewForm: TfrmNewForm
     Top = 315
     Width = 130
     Height = 137
-    Caption = '&Resolver'
+    Caption = '&Resolver mucho'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWhite
     Font.Height = -21
