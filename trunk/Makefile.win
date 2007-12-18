@@ -1,0 +1,42 @@
+# Project: Proyecto1
+# Compiler: Default GCC compiler
+# Compiler Type: MingW 3
+# Makefile created by wxDev-C++ 6.10.2 on 18/12/07 07:17
+
+CPP       = g++.exe
+CC        = gcc.exe
+WINDRES   = windres.exe
+OBJ       = Objects/MingW/EternityApp.o Objects/MingW/EternityFrm.o Objects/MingW/TableroFrm.o Objects/MingW/Eternity_private.res
+LINKOBJ   = Objects/MingW/EternityApp.o Objects/MingW/EternityFrm.o Objects/MingW/TableroFrm.o Objects/MingW/Eternity_private.res
+LIBS      = -L"C:/Archivos de programa/Dev-Cpp/Lib" -mwindows -lwxmsw28 -lwxmsw28_gl -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregex -lwxexpat -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32 -lodbc32 -lopengl32  
+INCS      = -I"include"
+CXXINCS   = -I"C:/Archivos de programa/Dev-Cpp/lib/gcc/mingw32/3.4.2/include" -I"C:/Archivos de programa/Dev-Cpp/include/c++/3.4.2/backward" -I"C:/Archivos de programa/Dev-Cpp/include/c++/3.4.2/mingw32" -I"C:/Archivos de programa/Dev-Cpp/include/c++/3.4.2" -I"C:/Archivos de programa/Dev-Cpp/include" -I"C:/Archivos de programa/Dev-Cpp/" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/msw" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/generic" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/fl" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/gizmos" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/html" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/mmedia" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/net" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/ogl" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/plot" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/protocol" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/stc" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/svg" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/xml" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx/xrc" -I"C:/Archivos de programa/Dev-Cpp/include/common/wx" -I"C:/Archivos de programa/Dev-Cpp/include/common"
+RCINCS    = --include-dir "C:/ARCHIV~1/Dev-Cpp/include/common"
+BIN       = Output/MingW/Eternity.exe
+DEFINES   =  -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__
+CXXFLAGS  = $(CXXINCS) $(DEFINES) -fno-exceptions -fno-pcc-struct-return -fstrict-aliasing -Wall -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__   -fexpensive-optimizations -O3
+CFLAGS    = $(INCS) $(DEFINES) -fno-exceptions -fno-pcc-struct-return -fstrict-aliasing -Wall -D__WXMSW__ -D__GNUWIN32__ -D__WIN95__   -fexpensive-optimizations -O3
+GPROF     = gprof.exe
+RM        = rm -f
+LINK      = g++.exe
+
+.PHONY: all all-before all-after clean clean-custom
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	$(RM) $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(LINK) $(LINKOBJ) -o "Output\MingW\Eternity.exe" $(LIBS)
+
+Objects/MingW/EternityApp.o: $(GLOBALDEPS) EternityApp.cpp EternityApp.h EternityFrm.h TableroFrm.h Ficha.h Tablero.h Ficha.h Tablero.h Jugar.h EternityFrm.h
+	$(CPP) -c EternityApp.cpp -o Objects/MingW/EternityApp.o $(CXXFLAGS)
+
+Objects/MingW/EternityFrm.o: $(GLOBALDEPS) EternityFrm.cpp EternityFrm.h TableroFrm.h Ficha.h Tablero.h Ficha.h Tablero.h Jugar.h EternityFrm.h
+	$(CPP) -c EternityFrm.cpp -o Objects/MingW/EternityFrm.o $(CXXFLAGS)
+
+Objects/MingW/TableroFrm.o: $(GLOBALDEPS) TableroFrm.cpp TableroFrm.h Ficha.h Tablero.h
+	$(CPP) -c TableroFrm.cpp -o Objects/MingW/TableroFrm.o $(CXXFLAGS)
+
+Objects/MingW/Eternity_private.res: Objects/MingW/Eternity_private.rc EternityApp.rc 
+	$(WINDRES) --input-format=rc -o Objects/MingW/Eternity_private.res $(RCINCS) Objects/MingW/ETERNI~1.RC -O coff
