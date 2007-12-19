@@ -40,7 +40,6 @@
 #include "TableroFrm.h"
 #include "Ficha.h"
 #include "Tablero.h"
-#include "Jugar.h"
 
 
 class EternityFrm : public wxFrame
@@ -53,12 +52,12 @@ class EternityFrm : public wxFrame
 		virtual ~EternityFrm();
 		void CrearClick(wxCommandEvent& event);
 		void MezclarClick(wxCommandEvent& event);
-		Tablero t;
+		Tablero *t;
 		TableroFrm *dialog;
 		void EternityFrmActivate(wxActivateEvent& event);
-		void EternityFrmInitDialog(wxInitDialogEvent& event);
 		void ResolverClick(wxCommandEvent& event);
 		void agregarLista(int);
+   		void resolverTablero();
 	private:
 		//Do not add custom control declarations between
 		//GUI Control Declaration Start and GUI Control Declaration End.
@@ -117,6 +116,9 @@ class EternityFrm : public wxFrame
 		};
 		
 	private:
+        bool poda(Ficha *hijo,int fila,int columna,int N);
+   	    bool solucion(int N);
+        void back(Ficha *fichas[],int fila, int columna, bool visitado[],int &c, int nivel,int N);
 		void OnClose(wxCloseEvent& event);
 		void CreateGUIControls();
 };

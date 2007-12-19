@@ -1,7 +1,7 @@
 [Project]
 FileName=Eternity.dev
 Name=Proyecto1
-UnitCount=12
+UnitCount=11
 PchHead=-1
 PchSource=-1
 Ver=3
@@ -171,18 +171,8 @@ Priority=1000
 OverrideBuildCmd=0
 BuildCmd=
 
-[Unit10]
-FileName=jugar.h
-CompileCpp=1
-Folder=Proyecto1
-Compile=1
-Link=1
-Priority=1000
-OverrideBuildCmd=0
-BuildCmd=
-
 [Unit11]
-FileName=ficha.h
+FileName=tablero.h
 CompileCpp=1
 Folder=Proyecto1
 Compile=1
@@ -193,6 +183,16 @@ BuildCmd=
 
 [Unit12]
 FileName=tablero.h
+CompileCpp=1
+Folder=Proyecto1
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit10]
+FileName=ficha.h
 CompileCpp=1
 Folder=Proyecto1
 Compile=1

@@ -225,3 +225,4 @@ void TableroFrm::TableroFrmActivate(wxActivateEvent& event)
 {
 	Refresh();
 }
+

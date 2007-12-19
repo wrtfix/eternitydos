@@ -51,7 +51,7 @@ class TableroFrm : public wxDialog
 	    void iniciarTablero(Tablero*,int,int,int,int);
 		wxColor Color(int);
 		void TableroFrmActivate(wxActivateEvent& event);
-		
+
 	private:
 		//Do not add custom control declarations between 
 		//GUI Control Declaration Start and GUI Control Declaration End.
