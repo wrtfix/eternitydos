@@ -1,7 +1,7 @@
 # Project: Proyecto1
 # Compiler: Default GCC compiler
 # Compiler Type: MingW 3
-# Makefile created by wxDev-C++ 6.10.2 on 18/12/07 07:17
+# Makefile created by wxDev-C++ 6.10.2 on 19/12/07 01:07
 
 CPP       = g++.exe
 CC        = gcc.exe
@@ -29,10 +29,10 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(LINK) $(LINKOBJ) -o "Output\MingW\Eternity.exe" $(LIBS)
 
-Objects/MingW/EternityApp.o: $(GLOBALDEPS) EternityApp.cpp EternityApp.h EternityFrm.h TableroFrm.h Ficha.h Tablero.h Ficha.h Tablero.h Jugar.h EternityFrm.h
+Objects/MingW/EternityApp.o: $(GLOBALDEPS) EternityApp.cpp EternityApp.h EternityFrm.h TableroFrm.h Ficha.h Tablero.h Ficha.h Tablero.h
 	$(CPP) -c EternityApp.cpp -o Objects/MingW/EternityApp.o $(CXXFLAGS)
 
-Objects/MingW/EternityFrm.o: $(GLOBALDEPS) EternityFrm.cpp EternityFrm.h TableroFrm.h Ficha.h Tablero.h Ficha.h Tablero.h Jugar.h EternityFrm.h
+Objects/MingW/EternityFrm.o: $(GLOBALDEPS) EternityFrm.cpp EternityFrm.h TableroFrm.h Ficha.h Tablero.h Ficha.h Tablero.h
 	$(CPP) -c EternityFrm.cpp -o Objects/MingW/EternityFrm.o $(CXXFLAGS)
 
 Objects/MingW/TableroFrm.o: $(GLOBALDEPS) TableroFrm.cpp TableroFrm.h Ficha.h Tablero.h
