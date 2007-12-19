@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'clave.ui'
 **
-** Created: Wed 19. Dec 09:53:27 2007
+** Created: Wed 19. Dec 17:21:24 2007
 **      by: Qt User Interface Compiler version 4.3.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -42,13 +42,15 @@ public:
     QPushButton *botonResolver;
     QLabel *label_3;
     QFrame *line;
+    QFrame *line_3;
+    QPushButton *botonGirar;
 
     void setupUi(QWidget *ClaveClass)
     {
     if (ClaveClass->objectName().isEmpty())
         ClaveClass->setObjectName(QString::fromUtf8("ClaveClass"));
     ClaveClass->setWindowModality(Qt::NonModal);
-    ClaveClass->resize(596, 502);
+    ClaveClass->resize(718, 590);
     line_2 = new QFrame(ClaveClass);
     line_2->setObjectName(QString::fromUtf8("line_2"));
     line_2->setGeometry(QRect(50, 350, 201, 20));
@@ -131,6 +133,14 @@ public:
     line->setGeometry(QRect(50, 220, 201, 20));
     line->setFrameShape(QFrame::HLine);
     line->setFrameShadow(QFrame::Sunken);
+    line_3 = new QFrame(ClaveClass);
+    line_3->setObjectName(QString::fromUtf8("line_3"));
+    line_3->setGeometry(QRect(50, 470, 201, 20));
+    line_3->setFrameShape(QFrame::HLine);
+    line_3->setFrameShadow(QFrame::Sunken);
+    botonGirar = new QPushButton(ClaveClass);
+    botonGirar->setObjectName(QString::fromUtf8("botonGirar"));
+    botonGirar->setGeometry(QRect(40, 510, 221, 24));
     QWidget::setTabOrder(spinN, spinCC);
     QWidget::setTabOrder(spinCC, botonCrear);
     QWidget::setTabOrder(botonCrear, botonMezclar);
@@ -161,6 +171,7 @@ public:
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><span style=\" font-size:9pt; font-weight:600; color:#000000;\">Instrucciones:</span></p></body></html>", 0, QApplication::UnicodeUTF8));
     botonResolver->setText(QApplication::translate("ClaveClass", "Resolver", 0, QApplication::UnicodeUTF8));
     label_3->setText(QApplication::translate("ClaveClass", "1. Primero debemos<br>crear un nuevo puzzle,<br>de tama\303\261o N x N con<br>una determinada cantidad<br>de posibles colores", 0, QApplication::UnicodeUTF8));
+    botonGirar->setText(QApplication::translate("ClaveClass", "Girar", 0, QApplication::UnicodeUTF8));
     Q_UNUSED(ClaveClass);
     } // retranslateUi
 

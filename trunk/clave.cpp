@@ -51,6 +51,7 @@ void Clave::on_botonResolver_clicked()
 void Clave::paintEvent(QPaintEvent *event)
 {	
     FichaView ficha(1,2,3,0);
+    this->lado = ficha.getLado(); // guardo el lado en una variable
     
 	for(int i=0;i<this->N;i++)
 		for(int j=0;j<this->N;j++)
@@ -60,9 +61,49 @@ void Clave::paintEvent(QPaintEvent *event)
 				ficha.setColorDerecha(t.get(i,j)->getDerecha());
 				ficha.setColorAbajo(t.get(i,j)->getAbajo());
 				ficha.setColorIzquierda(t.get(i,j)->getIzquierda());
- 				ficha.dibujarFicha(this,this->margenX+j*ficha.getLado(),this->margenY+i*ficha.getLado());
+ 				ficha.dibujarFicha(this,this->margenX+j*this->lado,this->margenY+i*this->lado);
 			}
 
+}
+// Esto es lo que agrege para que jueguen.
+
+bool Clave::perteneceTablero(int x,int y)
+{
+	if((x>=margenX)&&(y>=margenY)&&(N*lado > x)&&(N*lado > y))
+		return true;
+	else
+		return false;
+	
+}
+
+int Clave::posicion(int punto)
+{
+	/*for(int i=0;i<N;i++)
+		if (punto < i*lado)
+			return i;
+	return 0;*/
+	/*int algo = punto - this->;*/
+	
+	
+}
+
+void Clave::mousePressEvent(QMouseEvent *event)
+{
+//me da la coordenada en donde hizo click el chabalin
+
+	/*coordX = posicion(event->x());
+    coordY = posicion(event->y());*/
+    coordX =  int ((event->x() - this->margenX)/this->lado);
+    coordX =  int ((event->y() - this->margenY)/this->lado);
+    
+    f = t.get(coordY,coordX);
+}
+
+void Clave::on_botonGirar_clicked()
+{
+	this->f->Rotar();
+	t.set(f,coordY,coordX);
+	this->repaint();
 }
 
 
