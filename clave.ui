@@ -1,0 +1,233 @@
+<ui version="4.0" >
+ <class>ClaveClass</class>
+ <widget class="QWidget" name="ClaveClass" >
+  <property name="windowModality" >
+   <enum>Qt::NonModal</enum>
+  </property>
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>596</width>
+    <height>502</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Clave</string>
+  </property>
+  <widget class="Line" name="line_2" >
+   <property name="geometry" >
+    <rect>
+     <x>50</x>
+     <y>350</y>
+     <width>201</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation" >
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="geometry" >
+    <rect>
+     <x>40</x>
+     <y>380</y>
+     <width>211</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>3. Por último, aplicamos nuestro algortimo&lt;br>en busca de una solución</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="botonCrear" >
+   <property name="geometry" >
+    <rect>
+     <x>40</x>
+     <y>180</y>
+     <width>221</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="whatsThis" >
+    <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;/p>&lt;/body>&lt;/html></string>
+   </property>
+   <property name="text" >
+    <string>Crear</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="geometry" >
+    <rect>
+     <x>40</x>
+     <y>250</y>
+     <width>191</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>2. Ahora necesitamos mezclar las fichas&lt;br>   para que obtener un&lt;br>verdadero rompecabezas.</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget" >
+   <property name="geometry" >
+    <rect>
+     <x>160</x>
+     <y>90</y>
+     <width>104</width>
+     <height>52</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" >
+    <item>
+     <layout class="QHBoxLayout" >
+      <item>
+       <widget class="QLabel" name="label_2" >
+        <property name="text" >
+         <string>N:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="spinN" >
+        <property name="suffix" >
+         <string/>
+        </property>
+        <property name="minimum" >
+         <number>2</number>
+        </property>
+        <property name="maximum" >
+         <number>16</number>
+        </property>
+        <property name="value" >
+         <number>3</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" >
+      <item>
+       <widget class="QLabel" name="label" >
+        <property name="text" >
+         <string>#Colores:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="spinCC" >
+        <property name="minimum" >
+         <number>2</number>
+        </property>
+        <property name="maximum" >
+         <number>22</number>
+        </property>
+        <property name="value" >
+         <number>2</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QPushButton" name="botonMezclar" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="geometry" >
+    <rect>
+     <x>40</x>
+     <y>310</y>
+     <width>221</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Mezclar</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4" >
+   <property name="geometry" >
+    <rect>
+     <x>40</x>
+     <y>60</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;">&lt;span style=" font-size:9pt; font-weight:600; color:#000000;">Instrucciones:&lt;/span>&lt;/p>&lt;/body>&lt;/html></string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="botonResolver" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="geometry" >
+    <rect>
+     <x>40</x>
+     <y>430</y>
+     <width>221</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>Resolver</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3" >
+   <property name="geometry" >
+    <rect>
+     <x>40</x>
+     <y>100</y>
+     <width>125</width>
+     <height>70</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>1. Primero debemos&lt;br>crear un nuevo puzzle,&lt;br>de tamaño N x N con&lt;br>una determinada cantidad&lt;br>de posibles colores</string>
+   </property>
+  </widget>
+  <widget class="Line" name="line" >
+   <property name="enabled" >
+    <bool>false</bool>
+   </property>
+   <property name="geometry" >
+    <rect>
+     <x>50</x>
+     <y>220</y>
+     <width>201</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="orientation" >
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11" />
+ <tabstops>
+  <tabstop>spinN</tabstop>
+  <tabstop>spinCC</tabstop>
+  <tabstop>botonCrear</tabstop>
+  <tabstop>botonMezclar</tabstop>
+  <tabstop>botonResolver</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

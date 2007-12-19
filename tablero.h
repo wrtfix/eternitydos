@@ -5,7 +5,7 @@
 #define DERECHA 2
 #define ABAJO 3
 #define IZQUIERDA 4
-
+#include "Ficha.h"
 class Tablero
 {
     private:
@@ -27,6 +27,10 @@ class Tablero
 	public:
         Tablero()
         {
+            for(int i=0;i<MAX;i++)
+                for(int j=0;j<MAX;j++)
+                    matriz[i][j] = NULL;
+		    
         }
         
         int getN()
@@ -47,7 +51,7 @@ class Tablero
 
         Ficha* get(int fila, int columna)
         {
-            return matriz[fila][columna];
+            return this->matriz[fila][columna];
         }
 
         Ficha* getVecino(int fila, int columna, int posicion)
@@ -84,7 +88,7 @@ class Tablero
 
 	    void set(Ficha* f, int fila, int columna)
         {
-            matriz[fila][columna] = f;
+            this->matriz[fila][columna] = f;
         }
 
         
