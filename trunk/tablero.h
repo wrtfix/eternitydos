@@ -6,6 +6,7 @@
 #define ABAJO 3
 #define IZQUIERDA 4
 #include "Ficha.h"
+
 class Tablero
 {
     private:
@@ -23,75 +24,8 @@ class Tablero
                 else
                     return asignarValor(arreglo,colores);
         }
-        
-	public:
-        Tablero()
-        {
-            for(int i=0;i<MAX;i++)
-                for(int j=0;j<MAX;j++)
-                    matriz[i][j] = NULL;
-		    
-        }
-        
-        int getN()
-        {
-            return n;
-        }            
 
-
-        //hace falta esta función? o con la funcion GET alcanza?
-        bool Vacia(int columna, int fila)
-        {
-            if (get(fila,columna) == NULL)
-                return true;
-            else
-                return false;
-        }
-
-
-        Ficha* get(int fila, int columna)
-        {
-            return this->matriz[fila][columna];
-        }
-
-        Ficha* getVecino(int fila, int columna, int posicion)
-        {
-            if (posicion == ARRIBA)
-                return (this->get(fila-1,columna));
-            else
-                if (posicion == DERECHA)
-                    return (this->get(fila,columna+1));
-                else
-                    if (posicion == ABAJO)
-                        return (this->get(fila+1,columna));
-                    else
-                        if (posicion == IZQUIERDA)
-                            return (this->get(fila,columna-1));
-        }
-
-        bool borde(int fila, int columna, int posicion)
-        {
-            if (posicion == ARRIBA)
-                return (fila==0);
-            else
-                if (posicion == DERECHA)
-                    return (columna==n-1);
-                else
-                    if (posicion == ABAJO)
-                        return (fila==n-1);
-                    else
-                        if (posicion == IZQUIERDA)
-                            return (columna==0);
-                        else
-                            return false;
-        }
-
-	    void set(Ficha* f, int fila, int columna)
-        {
-            this->matriz[fila][columna] = f;
-        }
-
-        
+		//Comentario
         Ficha* asignarFicha(int fila, int columna, int* cantColores, int colores)
         {
             int arriba,derecha,abajo,izquierda;            
@@ -145,19 +79,71 @@ class Tablero
             return f;
         }
         
-       
-        // a partir de un arreglo de ficha ordenadas lo desordeno
 
-        void generarPuzzle(int cantColores,int n)
+	public:
+        Tablero()
         {
-            this->n = n;
             for(int i=0;i<MAX;i++)
                 for(int j=0;j<MAX;j++)
                     matriz[i][j] = NULL;
+			this->n = MAX;
+        }
+        
+        int getN()
+        {
+            return n;
+        }            
+
+        Ficha* get(int fila, int columna)
+        {
+            return this->matriz[fila][columna];
+        }
+
+        Ficha* getVecino(int fila, int columna, int posicion)
+        {
+            if (posicion == ARRIBA)
+                return (this->get(fila-1,columna));
+            else
+                if (posicion == DERECHA)
+                    return (this->get(fila,columna+1));
+                else
+                    if (posicion == ABAJO)
+                        return (this->get(fila+1,columna));
+                    else
+                        if (posicion == IZQUIERDA)
+                            return (this->get(fila,columna-1));
+        }
+
+        bool borde(int fila, int columna, int posicion)
+        {
+            if (posicion == ARRIBA)
+                return (fila==0);
+            else
+                if (posicion == DERECHA)
+                    return (columna==n-1);
+                else
+                    if (posicion == ABAJO)
+                        return (fila==n-1);
+                    else
+                        if (posicion == IZQUIERDA)
+                            return (columna==0);
+                        else
+                            return false;
+        }
+
+	    void set(Ficha* f, int fila, int columna)
+        {
+            this->matriz[fila][columna] = f;
+        }
+       
+        // Comentario
+        void generarPuzzle(int cantColores,int n)
+        {
 		    //cuantos subfichas de cada tipo puede haber?
             //(total subFichas - subFichas de borde) / cantSub
-
             
+			this->n = n;
+
             int s = n*n*4-n*4;
             if (cantColores<=(s/2))
             {    
@@ -182,7 +168,7 @@ class Tablero
             }
         }
         
-        void rotarAzar(Ficha *fichas[])
+		void rotarAzar(Ficha *fichas[])
         {
             int random;
 			for (int pos=0;pos<n*n;pos++)
