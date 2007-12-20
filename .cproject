@@ -98,6 +98,9 @@
 </profile>
 </storageModule>
 
+
+
+
 <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 <buildTargets>
 <target name="Qt Release Build" path="" targetID="org.eclipse.cdt.make.MakeTargetBuilder">
@@ -118,10 +121,7 @@
 </target>
 </buildTargets>
 </storageModule>
-
 <storageModule moduleId="org.eclipse.cdt.core.pathentry">
-<pathentry kind="src" path=""/>
-<pathentry kind="out" path=""/>
 <pathentry base-path="E:/Desarrollo/Qt/4.3.3/include" include="" kind="inc" path="" system="true"/>
 <pathentry base-path="E:/Desarrollo/Qt/4.3.3/include" include="QtCore" kind="inc" path="" system="true"/>
 <pathentry base-path="E:/Desarrollo/Qt/4.3.3/include" include="QtGui" kind="inc" path="" system="true"/>
@@ -133,11 +133,16 @@
 <pathentry base-path="E:/Desarrollo/Qt/4.3.3/include" include="QtSvg" kind="inc" path="" system="true"/>
 <pathentry base-path="E:/Desarrollo/Qt/4.3.3/include" include="Qt3Support" kind="inc" path="" system="true"/>
 <pathentry base-path="E:/Desarrollo/Qt/4.3.3/include" include="ActiveQt" kind="inc" path="" system="true"/>
-<pathentry base-path="E:/Desarrollo/Qt/4.3.3/include" include="QtDBus" kind="inc" path="" system="true"/>
 <pathentry base-path="E:/Desarrollo/Qt/4.3.3/include" include="QtDesigner" kind="inc" path="" system="true"/>
 <pathentry base-path="E:/Desarrollo/Qt/4.3.3/include" include="QtAssistant" kind="inc" path="" system="true"/>
 <pathentry base-path="E:/Desarrollo/Qt/4.3.3/include" include="QtOpenGL" kind="inc" path="" system="true"/>
 <pathentry base-path="E:/Desarrollo/Qt/4.3.3/include" include="QtUiTools" kind="inc" path="" system="true"/>
+<pathentry base-ref="org.eclipse.cdt.make.core.DISCOVERED_SCANNER_INFO" include="E:/Desarrollo/Qt/4.3.3/include/QtCore" kind="inc" path="" system="true"/>
+<pathentry base-ref="org.eclipse.cdt.make.core.DISCOVERED_SCANNER_INFO" include="E:/Desarrollo/Qt/4.3.3/include/QtGui" kind="inc" path="" system="true"/>
+<pathentry base-ref="org.eclipse.cdt.make.core.DISCOVERED_SCANNER_INFO" include="E:/Desarrollo/Qt/4.3.3/include" kind="inc" path="" system="true"/>
+<pathentry base-ref="org.eclipse.cdt.make.core.DISCOVERED_SCANNER_INFO" include="C:/Documents and Settings/pirata/workspace/Clave" kind="inc" path="" system="true"/>
+<pathentry kind="src" path=""/>
+<pathentry kind="out" path=""/>
 </storageModule>
 </cconfiguration>
 </storageModule>

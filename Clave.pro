@@ -5,7 +5,8 @@ QT += core \
 HEADERS += clave.h \
     FichaView.h \
     Ficha.h \
-    Tablero.h
+    Tablero.h \
+    Jugar.h
 SOURCES += main.cpp \
     clave.cpp \
     FichaView.cpp
