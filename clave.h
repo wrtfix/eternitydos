@@ -2,12 +2,17 @@
 #define CLAVE_H
 
 #include <QtGui/QWidget>
+#include <stdlib.h>
+#include <QFileDialog>
+
 
 #include "ui_clave.h"
 #include "Tablero.h"
 #include "FichaView.h"
 #include "Jugar.h"
 
+#include <fstream>
+#include <string>
 
 class Clave : public QWidget
 {
@@ -30,7 +35,7 @@ private slots:
     void on_botonCrear_clicked();
     void on_botonMezclar_clicked();
     void on_botonResolver_clicked();
-    
+    void on_botonAbrir_clicked();
     
 private:
 	Ui::ClaveClass ui;

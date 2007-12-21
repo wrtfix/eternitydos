@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'clave.h'
 **
-** Created: Thu 20. Dec 15:58:42 2007
+** Created: Thu 20. Dec 22:39:13 2007
 **      by: The Qt Meta Object Compiler version 59 (Qt 4.3.3)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -22,7 +22,7 @@ static const uint qt_meta_data_Clave[] = {
        1,       // revision
        0,       // classname
        0,    0, // classinfo
-       3,   10, // methods
+       4,   10, // methods
        0,    0, // properties
        0,    0, // enums/sets
 
@@ -30,6 +30,7 @@ static const uint qt_meta_data_Clave[] = {
        7,    6,    6,    6, 0x08,
       31,    6,    6,    6, 0x08,
       57,    6,    6,    6, 0x08,
+      84,    6,    6,    6, 0x08,
 
        0        // eod
 };
@@ -38,6 +39,7 @@ static const char qt_meta_stringdata_Clave[] = {
     "Clave\0\0on_botonCrear_clicked()\0"
     "on_botonMezclar_clicked()\0"
     "on_botonResolver_clicked()\0"
+    "on_botonAbrir_clicked()\0"
 };
 
 const QMetaObject Clave::staticMetaObject = {
@@ -68,8 +70,9 @@ int Clave::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: on_botonCrear_clicked(); break;
         case 1: on_botonMezclar_clicked(); break;
         case 2: on_botonResolver_clicked(); break;
+        case 3: on_botonAbrir_clicked(); break;
         }
-        _id -= 3;
+        _id -= 4;
     }
     return _id;
 }
