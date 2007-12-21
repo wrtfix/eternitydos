@@ -30,11 +30,6 @@ class Ficha
             ab = der;
             der = a;
         }
-        
-		bool compatibleEsq(int valor1, int valor2)
-		{
-			return false;
-		}
 	
         int getArriba()
         {

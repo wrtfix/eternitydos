@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'clave.ui'
 **
-** Created: Fri 21. Dec 02:34:25 2007
+** Created: Fri 21. Dec 03:31:28 2007
 **      by: Qt User Interface Compiler version 4.3.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -159,7 +159,7 @@ public:
 
     void retranslateUi(QWidget *ClaveClass)
     {
-    ClaveClass->setWindowTitle(QApplication::translate("ClaveClass", "Clave", 0, QApplication::UnicodeUTF8));
+    ClaveClass->setWindowTitle(QApplication::translate("ClaveClass", "Eternity Dos - v0.0.1", 0, QApplication::UnicodeUTF8));
     label_6->setText(QApplication::translate("ClaveClass", "3. Por \303\272ltimo, aplicamos nuestro algortimo<br>en busca de una soluci\303\263n", 0, QApplication::UnicodeUTF8));
     botonCrear->setWhatsThis(QApplication::translate("ClaveClass", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"

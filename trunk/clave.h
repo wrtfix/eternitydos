@@ -9,7 +9,7 @@
 #include "ui_clave.h"
 #include "Tablero.h"
 #include "FichaView.h"
-#include "Jugar.h"
+#include "Juego.h"
 
 #include <fstream>
 #include <string>

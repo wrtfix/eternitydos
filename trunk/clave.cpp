@@ -22,7 +22,6 @@ void Clave::on_botonCrear_clicked()
 	this->C = ui.spinCC->value();
 	this->t.generarPuzzle(C,N);
 	ui.botonMezclar->setEnabled(true);
-	//ui.botonCrear->setEnabled(false);
 	this->repaint();
 }
 
@@ -39,12 +38,11 @@ void Clave::on_botonMezclar_clicked()
 
 void Clave::on_botonResolver_clicked()
 {
-	Jugar persona(N,C);
+	Juego nuevoJuego(N,C);
 	Ficha *arreglo[N*N];
 	this->t.toArreglo(arreglo);
-	persona.resolverPuzzle(&t,arreglo);
+	nuevoJuego.resolverPuzzle(&t,arreglo);
 	ui.botonCrear->setEnabled(true);
-	//ui.botonMezclar->setEnabled(false);
 	ui.botonResolver->setEnabled(false);
 	this->repaint();
 }
