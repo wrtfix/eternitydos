@@ -100,6 +100,9 @@ p, li { white-space: pre-wrap; }
       </item>
       <item>
        <widget class="QSpinBox" name="spinN" >
+        <property name="accelerated" >
+         <bool>true</bool>
+        </property>
         <property name="suffix" >
          <string/>
         </property>
@@ -127,6 +130,9 @@ p, li { white-space: pre-wrap; }
       </item>
       <item>
        <widget class="QSpinBox" name="spinCC" >
+        <property name="accelerated" >
+         <bool>true</bool>
+        </property>
         <property name="minimum" >
          <number>2</number>
         </property>
