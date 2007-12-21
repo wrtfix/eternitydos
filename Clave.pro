@@ -1,12 +1,14 @@
-HEADERS += app
+HEADERS += juego.h \
+    Juego.h \
+    app
 TARGET = Clave
 QT += core \
     gui
-HEADERS += clave.h \
+HEADERS += juego.h \
+    clave.h \
     FichaView.h \
     Ficha.h \
-    Tablero.h \
-    Jugar.h
+    Tablero.h
 SOURCES += main.cpp \
     clave.cpp \
     FichaView.cpp
