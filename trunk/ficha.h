@@ -1,10 +1,6 @@
 #ifndef FICHA_H
 #define FICHA_H
 
-//<sacar>
-//#include <iostream>
-#include <cstdlib>
-
 #define ARRIBA 1
 #define DERECHA 2
 #define ABAJO 3
@@ -22,26 +18,10 @@ class Ficha
             int x;
             int y;
 	public:
-		// class constructor
 
     	Ficha(){}
-        bool compatible(Ficha *otra, int posicion)
-        {
-            if (posicion == ARRIBA) // posicion 1 Arriba
-                return (otra->getArriba() == ab);
-            else
-                if (posicion == DERECHA) // posicion 2 Derecha                
-                    return (otra->getDerecha() == izq);
-                else
-                    if (posicion == ABAJO) // posicion 3 Abajo                
-                         return (otra->getAbajo() == arr);
-                    else
-                        if (posicion == IZQUIERDA) // posicion 4 Izquierda
-                            return (otra->getIzquierda() == der);
-                        else
-                            return false;
-        }
-        
+    	
+    	//Rota una ficha una vez, en sentido horario.
         void Rotar()
         {
             int a = arr;
@@ -51,24 +31,6 @@ class Ficha
             der = a;
         }
         
-        //Devuelve TRUE si "this" es compatible()con f, hace rotaciones
-        bool compatibleRotacion(Ficha *f,int posicion)
-        {
-			if (compatible(f,posicion))
-				return true;
-			else
-				f->Rotar();
-				if (compatible(f,posicion))
-					return true;
-				else
-					f->Rotar();
-					if (compatible(f,posicion))
-						return true;
-					else
-						f->Rotar();
-						return (compatible(f,posicion));
-		}
-		
 		bool compatibleEsq(int valor1, int valor2)
 		{
 			return false;
@@ -127,8 +89,6 @@ class Ficha
         }
 
 		~Ficha(){}
-   
-  
 };
 
 #endif // FICHA_H

@@ -9,7 +9,11 @@ class Jugar
 	private:
         int N;
         int cantColores;
-        bool poda(Tablero *t,Ficha *hijo,int fila,int columna)
+        
+        /* Verifica si una ficha entra en una posición del tablero en un determinado
+         * estado del estado del mismo.
+         */
+        bool entraFicha(Tablero *t,Ficha *hijo,int fila,int columna)
         {
             int arriba; //lo que hay arriba de HIJO
             int derecha; //lo que hay a la derecha de HIJO
@@ -56,6 +60,7 @@ class Jugar
         
         }
 
+        //Verifica si el tablero está en estado solucion.
 	    bool solucion(Tablero *t)
 	    {
             int i=0;
@@ -75,64 +80,64 @@ class Jugar
             return ningunNull;
         }
   
-        void back(Tablero *t,Ficha *fichas[],int fila, int columna, bool visitado[],int &c, int nivel)
+	    //ALGORITMO PRINCIPAL DEL SISTEMA
+	    //BACKTRACKING PARA ENCONTRAR UNA SOLUCION.
+        void back(Tablero *t,Ficha *fichas[],int fila, int columna, bool visitado[],int &c)
         {
-			if (nivel>0)
-            {
-                if (solucion(t))
-    			{
-                    c++;
-                }
-                else
-    	        {
-                    for (int nroFicha = 0 ; nroFicha<N*N ; nroFicha++)
-                        for (int rotaciones = 0;rotaciones<4 && !visitado[nroFicha];rotaciones++)
-                        {
-                            if (!poda(t,fichas[nroFicha],fila,columna))
-                            {
-        					   t->set(fichas[nroFicha],fila,columna);
-        					   t->get(fila,columna)->setX(fila+1);
-        					   t->get(fila,columna)->setY(columna+1);
-        					   visitado[nroFicha] = true;
-    	                       if ((columna == N-1) && (fila < N-1))
-        	                    	back(t,fichas,fila+1,0,visitado,c,nivel-1);
-        	                    else
-        	                       	if (columna < N-1)
-        								back(t,fichas,fila,columna+1,visitado,c,nivel-1);
-        							else
-        								//solo en la ultima... ubiqué todas las fichas!
-        								back(t,fichas,fila,columna,visitado,c,nivel-1);
-
-        					    if (c==0)
-                            	{	
-                                    visitado[nroFicha]=false;
-        	                       	t->set(NULL,fila,columna);
-                                }
-                            }
-                            if (c==0)
-        	                    fichas[nroFicha]->Rotar();
-                        }
+            if (solucion(t))
+			{
+                c++;
             }
+            else
+	        {
+                for (int nroFicha = 0 ; nroFicha<N*N ; nroFicha++)
+                    for (int rotaciones = 0;rotaciones<4 && !visitado[nroFicha];rotaciones++)
+                    {
+                        if (!entraFicha(t,fichas[nroFicha],fila,columna))
+                        {
+    					   t->set(fichas[nroFicha],fila,columna);
+    					   t->get(fila,columna)->setX(fila+1);
+    					   t->get(fila,columna)->setY(columna+1);
+    					   visitado[nroFicha] = true;
+	                       if ((columna == N-1) && (fila < N-1))
+    	                    	back(t,fichas,fila+1,0,visitado,c);
+    	                    else
+    	                       	if (columna < N-1)
+    								back(t,fichas,fila,columna+1,visitado,c);
+    							else
+    								//solo en la ultima... ubiqué todas las fichas!
+    								back(t,fichas,fila,columna,visitado,c);
+
+    					    if (c==0)
+                        	{	
+                                visitado[nroFicha]=false;
+    	                       	t->set(NULL,fila,columna);
+                            }
+                        }
+                        if (c==0)
+    	                    fichas[nroFicha]->Rotar();
+                    }
         }
     }
  
     public:
-		// class constructor
 		Jugar(int p,int c)
         {    
             N = p;
             cantColores = c;
         }
         
-		void Resolver(Tablero* t,Ficha* f[])
+		//Resuelve un puzzle a partir de un tablero y un arreglo con las fichas.
+		void resolverPuzzle(Tablero* t,Ficha* f[])
 		{
             bool visitado[N*N];
             for (int i=0;i<N*N;i++)
                 visitado[i] = false;
             int contador = 0;
-            int nivel = (N*N*3)+1;
-            this->back(t,f,0,0,visitado,contador,nivel);
+            //int nivel = (N*N*3)+1;
+            this->back(t,f,0,0,visitado,contador);
         }
+		
 		~Jugar(){}
 };
 

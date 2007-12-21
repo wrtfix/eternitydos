@@ -29,10 +29,10 @@ void Clave::on_botonCrear_clicked()
 void Clave::on_botonMezclar_clicked()
 {
 	Ficha *arreglo[N*N];
-	this->t.armandoUno(arreglo);
+	this->t.toArreglo(arreglo);
 	this->t.mezclar(arreglo);
 	this->t.rotarAzar(arreglo);
-	this->t.Paso(arreglo);
+	this->t.fromArreglo(arreglo);
 	ui.botonResolver->setEnabled(true);
 	this->repaint();
 }
@@ -41,8 +41,8 @@ void Clave::on_botonResolver_clicked()
 {
 	Jugar persona(N,C);
 	Ficha *arreglo[N*N];
-	this->t.armandoUno(arreglo);
-	persona.Resolver(&t,arreglo);
+	this->t.toArreglo(arreglo);
+	persona.resolverPuzzle(&t,arreglo);
 	ui.botonCrear->setEnabled(true);
 	//ui.botonMezclar->setEnabled(false);
 	ui.botonResolver->setEnabled(false);
@@ -82,7 +82,7 @@ void Clave::on_botonAbrir_clicked()
 	    MiArchivo.close();
 	    
 	    t.setN(this->N);
-	    t.Paso(arreglo);
+	    t.fromArreglo(arreglo);
 	    this->repaint();
 	}
 	
