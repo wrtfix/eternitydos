@@ -5,7 +5,9 @@
 #define DERECHA 2
 #define ABAJO 3
 #define IZQUIERDA 4
+
 #include "Ficha.h"
+
 
 class Tablero
 {
@@ -15,7 +17,7 @@ class Tablero
         //la matriz real es de 16x16 (el tamaño macolumnaimo)
         Ficha *matriz[MAX][MAX];
         //tamaño de matriz que se usará
-        int n;
+        int N;
         int asignarValor(int *arreglo, int colores)
         {
                 int random = rand()%colores+1;
@@ -86,13 +88,18 @@ class Tablero
             for(int i=0;i<MAX;i++)
                 for(int j=0;j<MAX;j++)
                     matriz[i][j] = NULL;
-			this->n = MAX;
+			this->N = MAX;
         }
         
         int getN()
         {
-            return n;
-        }            
+            return N;
+        }
+        
+        void setN(int N)
+        {
+        	this->N = N;
+        }
 
         Ficha* get(int fila, int columna)
         {
@@ -120,10 +127,10 @@ class Tablero
                 return (fila==0);
             else
                 if (posicion == DERECHA)
-                    return (columna==n-1);
+                    return (columna==N-1);
                 else
                     if (posicion == ABAJO)
-                        return (fila==n-1);
+                        return (fila==N-1);
                     else
                         if (posicion == IZQUIERDA)
                             return (columna==0);
@@ -142,7 +149,7 @@ class Tablero
 		    //cuantos subfichas de cada tipo puede haber?
             //(total subFichas - subFichas de borde) / cantSub
             
-			this->n = n;
+			this->N = n;
 
             int s = n*n*4-n*4;
             if (cantColores<=(s/2))
@@ -171,7 +178,7 @@ class Tablero
 		void rotarAzar(Ficha *fichas[])
         {
             int random;
-			for (int pos=0;pos<n*n;pos++)
+			for (int pos=0;pos<N*N;pos++)
 			{
                 random = rand()%4;
                 while (random > 0)
@@ -186,10 +193,10 @@ class Tablero
         {
             Ficha *aux;
             int j;
-            int t = (n*n)-1;
+            int t = (N*N)-1;
             while (t > 1)
             {
-                j = rand()%n;
+                j = rand()%N;
                 aux = elementos[j];
                 elementos[j] = elementos[t];
                 elementos[t] = aux;
@@ -199,19 +206,19 @@ class Tablero
         
         void armandoUno(Ficha *arreglo[])
         {
-            for(int i=0;i<n*n;i++)
+            for(int i=0;i<N*N;i++)
                     arreglo[i] = NULL;
 
             int pos=0;
-            for (int i=0;i<n;i++)  
-                for (int j=0;j<n;j++)  
+            for (int i=0;i<N;i++)  
+                for (int j=0;j<N;j++)  
                 {
                     arreglo[pos] = get(i,j);
                     pos++;
                 }
 
-          for (int i=0;i<n;i++)
-                for (int j=0;j<n;j++)
+          for (int i=0;i<N;i++)
+                for (int j=0;j<N;j++)
                     set(NULL,i,j);
         
        } 
@@ -219,13 +226,14 @@ class Tablero
         void Paso(Ficha *arreglo[])     
         {
             int pos = 0;
-            for (int i=0;i<n;i++)
-                for (int j=0;j<n;j++)
+            for (int i=0;i<N;i++)
+                for (int j=0;j<N;j++)
                 {
                     set(arreglo[pos],i,j);
                     pos++;  
                 }            
         }
+        
         ~Tablero(){}
 };
 

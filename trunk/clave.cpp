@@ -22,7 +22,7 @@ void Clave::on_botonCrear_clicked()
 	this->C = ui.spinCC->value();
 	this->t.generarPuzzle(C,N);
 	ui.botonMezclar->setEnabled(true);
-	ui.botonCrear->setEnabled(false);
+	//ui.botonCrear->setEnabled(false);
 	this->repaint();
 }
 void Clave::on_botonMezclar_clicked()
@@ -43,11 +43,46 @@ void Clave::on_botonResolver_clicked()
 	this->t.armandoUno(arreglo);
 	persona.Resolver(&t,arreglo);
 	ui.botonCrear->setEnabled(true);
-	ui.botonMezclar->setEnabled(false);
+	//ui.botonMezclar->setEnabled(false);
 	ui.botonResolver->setEnabled(false);
 	this->repaint();
 }
-
+void Clave::on_botonAbrir_clicked()
+{
+	 QString fileName = QFileDialog::getOpenFileName(this,
+	                         tr("Nombre del Archivo"), ".",
+	                         tr("Texto (*.txt)"));
+	 string linea;
+	 ifstream MiArchivo ("C:\\ejemplo.txt"); 
+	 int cont = 0;
+	 if (MiArchivo.is_open())
+	 {
+		//Mientras que no sea fin de archivo
+	    getline (MiArchivo,linea);
+	    this->N = atoi(&linea[0]);
+	    Ficha *arreglo[(this->N)*(this->N)];
+	    Ficha *f;
+	    ui.botonMezclar->setEnabled(true);
+	    ui.botonResolver->setEnabled(true);
+	    while (! MiArchivo.eof() )
+	    {
+	    	f = new Ficha();
+	    	getline (MiArchivo,linea);
+	        f->setArriba(atoi(&linea[0]));
+	        f->setDerecha(atoi(&linea[2]));
+	        f->setAbajo(atoi(&linea[4]));
+	        f->setIzquierda(atoi(&linea[6]));
+	        arreglo[cont] = f;
+	        cont++;
+	    }
+	    MiArchivo.close();
+	    
+	    t.setN(this->N);
+	    t.Paso(arreglo);
+	    this->repaint();
+	}
+	
+}
 void Clave::paintEvent(QPaintEvent *event)
 {	
     FichaView ficha(1,2,3,0);

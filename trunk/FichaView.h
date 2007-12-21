@@ -11,6 +11,7 @@ public:
 	void dibujarFicha(QWidget *widget, int x, int y);
 	
 	QColor getColor(int);
+	QColor getSubcolor(int);
 	
 	virtual ~FichaView();
 	
