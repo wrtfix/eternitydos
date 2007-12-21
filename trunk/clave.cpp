@@ -25,6 +25,7 @@ void Clave::on_botonCrear_clicked()
 	//ui.botonCrear->setEnabled(false);
 	this->repaint();
 }
+
 void Clave::on_botonMezclar_clicked()
 {
 	Ficha *arreglo[N*N];
@@ -47,13 +48,16 @@ void Clave::on_botonResolver_clicked()
 	ui.botonResolver->setEnabled(false);
 	this->repaint();
 }
+
 void Clave::on_botonAbrir_clicked()
 {
 	 QString fileName = QFileDialog::getOpenFileName(this,
 	                         tr("Nombre del Archivo"), ".",
 	                         tr("Texto (*.txt)"));
 	 string linea;
-	 ifstream MiArchivo ("C:\\ejemplo.txt"); 
+	 QByteArray nombre = fileName.toLatin1();
+	 const char *nombreChar = nombre.data();
+	 ifstream MiArchivo (nombreChar); 
 	 int cont = 0;
 	 if (MiArchivo.is_open())
 	 {
@@ -83,6 +87,7 @@ void Clave::on_botonAbrir_clicked()
 	}
 	
 }
+
 void Clave::paintEvent(QPaintEvent *event)
 {	
     FichaView ficha(1,2,3,0);
