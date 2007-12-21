@@ -18,6 +18,11 @@ class Tablero
         Ficha *matriz[MAX][MAX];
         //tamaño de matriz que se usará
         int N;
+        
+        /* Funcion utilizada para generar un puzzle.
+         * Para generar una ficha. Esta función retorna un color.
+         * Lleva un conteo de los colores que ubica en "arreglo"
+         */
         int asignarValor(int *arreglo, int colores)
         {
                 int random = rand()%colores+1;
@@ -27,7 +32,9 @@ class Tablero
                     return asignarValor(arreglo,colores);
         }
 
-		//Comentario
+		/* Funcion utilizada para generar un puzzle.
+		 * Dada una posicion devuelve al azar una ficha a ubicar.		 * 
+		 */
         Ficha* asignarFicha(int fila, int columna, int* cantColores, int colores)
         {
             int arriba,derecha,abajo,izquierda;            
@@ -50,7 +57,6 @@ class Tablero
                 cantColores[derecha]--;
             }
 
-
             //ABAJO
             if (this->borde(fila,columna,ABAJO))
                 abajo = 0;
@@ -59,7 +65,6 @@ class Tablero
                 abajo = asignarValor(cantColores,colores);
                 cantColores[abajo]--;
             }
-
 
             //IZQUIERDA
             if (this->borde(fila,columna,IZQUIERDA))
@@ -106,50 +111,53 @@ class Tablero
             return this->matriz[fila][columna];
         }
 
-        Ficha* getVecino(int fila, int columna, int posicion)
+        //Devuelve el vecino correspondiente a la ficha ubicada en (fila,columna).
+        Ficha* getVecino(int fila, int columna, int orientacion)
         {
-            if (posicion == ARRIBA)
+            if (orientacion == ARRIBA)
                 return (this->get(fila-1,columna));
             else
-                if (posicion == DERECHA)
+                if (orientacion == DERECHA)
                     return (this->get(fila,columna+1));
                 else
-                    if (posicion == ABAJO)
+                    if (orientacion == ABAJO)
                         return (this->get(fila+1,columna));
                     else
-                        if (posicion == IZQUIERDA)
+                        if (orientacion == IZQUIERDA)
                             return (this->get(fila,columna-1));
         }
-
-        bool borde(int fila, int columna, int posicion)
+        
+        //Determina si la posicion (fila,columna) se ubica sobre el borde del tablero
+        bool borde(int fila, int columna, int orientacion)
         {
-            if (posicion == ARRIBA)
+            if (orientacion == ARRIBA)
                 return (fila==0);
             else
-                if (posicion == DERECHA)
+                if (orientacion == DERECHA)
                     return (columna==N-1);
                 else
-                    if (posicion == ABAJO)
+                    if (orientacion == ABAJO)
                         return (fila==N-1);
                     else
-                        if (posicion == IZQUIERDA)
+                        if (orientacion == IZQUIERDA)
                             return (columna==0);
                         else
                             return false;
         }
-
+        
+        //Ubica una Ficha f en una posición del Tablero.
 	    void set(Ficha* f, int fila, int columna)
         {
             this->matriz[fila][columna] = f;
         }
        
-        // Comentario
+        // Crea al azar un tablero con fichas (puzzle resuelto).
         void generarPuzzle(int cantColores,int n)
         {
 		    //cuantos subfichas de cada tipo puede haber?
             //(total subFichas - subFichas de borde) / cantSub
             
-			this->N = n;
+			this->setN(n);
 
             int s = n*n*4-n*4;
             if (cantColores<=(s/2))
@@ -166,8 +174,6 @@ class Tablero
     
                 for(int i=0;i<(cantColores+1);i++)
                     Colores[i]=s;
-
-                
     
                 for(int fil=0;fil<n;fil++)
                     for(int col=0;col<n;col++)
@@ -175,6 +181,7 @@ class Tablero
             }
         }
         
+        //Rota varias veces al azar las fichas contenidas en "fichas". 
 		void rotarAzar(Ficha *fichas[])
         {
             int random;
@@ -188,7 +195,8 @@ class Tablero
                 }
             }
 		}
-
+		
+		//randomiza las posiciones de las fichas dentro del arreglo elementos.
         void mezclar(Ficha *elementos[])
         {
             Ficha *aux;
@@ -204,7 +212,10 @@ class Tablero
             }
         }
         
-        void armandoUno(Ficha *arreglo[])
+        /*Pasa las Fichas del Tablero a arreglo
+         * Setea todo el Tablero a NULL
+         * */
+        void toArreglo(Ficha *arreglo[])
         {
             for(int i=0;i<N*N;i++)
                     arreglo[i] = NULL;
@@ -223,7 +234,8 @@ class Tablero
         
        } 
         
-        void Paso(Ficha *arreglo[])     
+        //A partir de un arreglo de Fichas*, completa el Tablero.
+        void fromArreglo(Ficha *arreglo[])     
         {
             int pos = 0;
             for (int i=0;i<N;i++)
@@ -231,7 +243,7 @@ class Tablero
                 {
                     set(arreglo[pos],i,j);
                     pos++;  
-                }            
+                }
         }
         
         ~Tablero(){}

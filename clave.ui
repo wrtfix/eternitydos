@@ -19,7 +19,7 @@
    <property name="geometry" >
     <rect>
      <x>50</x>
-     <y>350</y>
+     <y>440</y>
      <width>201</width>
      <height>20</height>
     </rect>
@@ -35,7 +35,7 @@
    <property name="geometry" >
     <rect>
      <x>40</x>
-     <y>380</y>
+     <y>470</y>
      <width>211</width>
      <height>31</height>
     </rect>
@@ -47,9 +47,9 @@
   <widget class="QPushButton" name="botonCrear" >
    <property name="geometry" >
     <rect>
-     <x>40</x>
-     <y>180</y>
-     <width>221</width>
+     <x>160</x>
+     <y>280</y>
+     <width>101</width>
      <height>24</height>
     </rect>
    </property>
@@ -70,7 +70,7 @@ p, li { white-space: pre-wrap; }
    <property name="geometry" >
     <rect>
      <x>40</x>
-     <y>250</y>
+     <y>340</y>
      <width>191</width>
      <height>42</height>
     </rect>
@@ -83,7 +83,7 @@ p, li { white-space: pre-wrap; }
    <property name="geometry" >
     <rect>
      <x>160</x>
-     <y>90</y>
+     <y>180</y>
      <width>104</width>
      <height>52</height>
     </rect>
@@ -148,9 +148,9 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="geometry" >
     <rect>
-     <x>40</x>
-     <y>310</y>
-     <width>221</width>
+     <x>110</x>
+     <y>400</y>
+     <width>91</width>
      <height>24</height>
     </rect>
    </property>
@@ -162,7 +162,7 @@ p, li { white-space: pre-wrap; }
    <property name="geometry" >
     <rect>
      <x>40</x>
-     <y>60</y>
+     <y>150</y>
      <width>91</width>
      <height>21</height>
     </rect>
@@ -180,11 +180,17 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="geometry" >
     <rect>
-     <x>40</x>
-     <y>430</y>
-     <width>221</width>
+     <x>110</x>
+     <y>520</y>
+     <width>91</width>
      <height>24</height>
     </rect>
+   </property>
+   <property name="toolTip" >
+    <string>&lt;html>&lt;head>&lt;meta name="qrichtext" content="1" />&lt;style type="text/css">
+p, li { white-space: pre-wrap; }
+&lt;/style>&lt;/head>&lt;body style=" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;">
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">¿Estas listo para aplicar el algoritmo?&lt;/p>&lt;/body>&lt;/html></string>
    </property>
    <property name="text" >
     <string>Resolver</string>
@@ -194,13 +200,13 @@ p, li { white-space: pre-wrap; }
    <property name="geometry" >
     <rect>
      <x>40</x>
-     <y>100</y>
-     <width>125</width>
-     <height>70</height>
+     <y>190</y>
+     <width>174</width>
+     <height>84</height>
     </rect>
    </property>
    <property name="text" >
-    <string>1. Primero debemos&lt;br>crear un nuevo puzzle,&lt;br>de tamaño N x N con&lt;br>una determinada cantidad&lt;br>de posibles colores</string>
+    <string>1. Primero debemos&lt;br>crear un nuevo puzzle,&lt;br>de tamaño N x N con&lt;br>una determinada cantidad&lt;br>de posibles colores. O bien podemos&lt;br>obtenerlo a partir de un archivo.</string>
    </property>
   </widget>
   <widget class="Line" name="line" >
@@ -210,7 +216,7 @@ p, li { white-space: pre-wrap; }
    <property name="geometry" >
     <rect>
      <x>50</x>
-     <y>220</y>
+     <y>310</y>
      <width>201</width>
      <height>20</height>
     </rect>
@@ -223,7 +229,7 @@ p, li { white-space: pre-wrap; }
    <property name="geometry" >
     <rect>
      <x>50</x>
-     <y>470</y>
+     <y>550</y>
      <width>201</width>
      <height>20</height>
     </rect>
@@ -239,16 +245,29 @@ p, li { white-space: pre-wrap; }
    <property name="geometry" >
     <rect>
      <x>40</x>
-     <y>510</y>
-     <width>221</width>
+     <y>280</y>
+     <width>101</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text" >
-    <string>&amp;Abrir</string>
+    <string>&amp;Abrir tablero</string>
    </property>
    <property name="default" >
     <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_7" >
+   <property name="geometry" >
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>211</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="text" >
+    <string>&lt;center>&lt;img src="banner.jpg">&lt;/center></string>
    </property>
   </widget>
  </widget>

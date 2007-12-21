@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'clave.h'
 **
-** Created: Thu 20. Dec 22:39:13 2007
+** Created: Fri 21. Dec 03:05:19 2007
 **      by: The Qt Meta Object Compiler version 59 (Qt 4.3.3)
 **
 ** WARNING! All changes made in this file will be lost!

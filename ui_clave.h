@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'clave.ui'
 **
-** Created: Thu 20. Dec 22:01:16 2007
+** Created: Fri 21. Dec 02:34:25 2007
 **      by: Qt User Interface Compiler version 4.3.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -44,6 +44,7 @@ public:
     QFrame *line;
     QFrame *line_3;
     QPushButton *botonAbrir;
+    QLabel *label_7;
 
     void setupUi(QWidget *ClaveClass)
     {
@@ -53,23 +54,23 @@ public:
     ClaveClass->resize(718, 625);
     line_2 = new QFrame(ClaveClass);
     line_2->setObjectName(QString::fromUtf8("line_2"));
-    line_2->setGeometry(QRect(50, 350, 201, 20));
+    line_2->setGeometry(QRect(50, 440, 201, 20));
     line_2->setFrameShape(QFrame::HLine);
     line_2->setFrameShadow(QFrame::Sunken);
     label_6 = new QLabel(ClaveClass);
     label_6->setObjectName(QString::fromUtf8("label_6"));
     label_6->setEnabled(false);
-    label_6->setGeometry(QRect(40, 380, 211, 31));
+    label_6->setGeometry(QRect(40, 470, 211, 31));
     botonCrear = new QPushButton(ClaveClass);
     botonCrear->setObjectName(QString::fromUtf8("botonCrear"));
-    botonCrear->setGeometry(QRect(40, 180, 221, 24));
+    botonCrear->setGeometry(QRect(160, 280, 101, 24));
     label_5 = new QLabel(ClaveClass);
     label_5->setObjectName(QString::fromUtf8("label_5"));
     label_5->setEnabled(false);
-    label_5->setGeometry(QRect(40, 250, 191, 42));
+    label_5->setGeometry(QRect(40, 340, 191, 42));
     layoutWidget = new QWidget(ClaveClass);
     layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-    layoutWidget->setGeometry(QRect(160, 90, 104, 52));
+    layoutWidget->setGeometry(QRect(160, 180, 104, 52));
     vboxLayout = new QVBoxLayout(layoutWidget);
     vboxLayout->setSpacing(6);
     vboxLayout->setMargin(11);
@@ -116,33 +117,36 @@ public:
     botonMezclar = new QPushButton(ClaveClass);
     botonMezclar->setObjectName(QString::fromUtf8("botonMezclar"));
     botonMezclar->setEnabled(false);
-    botonMezclar->setGeometry(QRect(40, 310, 221, 24));
+    botonMezclar->setGeometry(QRect(110, 400, 91, 24));
     label_4 = new QLabel(ClaveClass);
     label_4->setObjectName(QString::fromUtf8("label_4"));
-    label_4->setGeometry(QRect(40, 60, 91, 21));
+    label_4->setGeometry(QRect(40, 150, 91, 21));
     botonResolver = new QPushButton(ClaveClass);
     botonResolver->setObjectName(QString::fromUtf8("botonResolver"));
     botonResolver->setEnabled(false);
-    botonResolver->setGeometry(QRect(40, 430, 221, 24));
+    botonResolver->setGeometry(QRect(110, 520, 91, 24));
     label_3 = new QLabel(ClaveClass);
     label_3->setObjectName(QString::fromUtf8("label_3"));
-    label_3->setGeometry(QRect(40, 100, 125, 70));
+    label_3->setGeometry(QRect(40, 190, 174, 84));
     line = new QFrame(ClaveClass);
     line->setObjectName(QString::fromUtf8("line"));
     line->setEnabled(false);
-    line->setGeometry(QRect(50, 220, 201, 20));
+    line->setGeometry(QRect(50, 310, 201, 20));
     line->setFrameShape(QFrame::HLine);
     line->setFrameShadow(QFrame::Sunken);
     line_3 = new QFrame(ClaveClass);
     line_3->setObjectName(QString::fromUtf8("line_3"));
-    line_3->setGeometry(QRect(50, 470, 201, 20));
+    line_3->setGeometry(QRect(50, 550, 201, 20));
     line_3->setFrameShape(QFrame::HLine);
     line_3->setFrameShadow(QFrame::Sunken);
     botonAbrir = new QPushButton(ClaveClass);
     botonAbrir->setObjectName(QString::fromUtf8("botonAbrir"));
     botonAbrir->setEnabled(true);
-    botonAbrir->setGeometry(QRect(40, 510, 221, 24));
+    botonAbrir->setGeometry(QRect(40, 280, 101, 24));
     botonAbrir->setDefault(false);
+    label_7 = new QLabel(ClaveClass);
+    label_7->setObjectName(QString::fromUtf8("label_7"));
+    label_7->setGeometry(QRect(40, 20, 211, 121));
     QWidget::setTabOrder(spinN, spinCC);
     QWidget::setTabOrder(spinCC, botonCrear);
     QWidget::setTabOrder(botonCrear, botonMezclar);
@@ -171,9 +175,14 @@ public:
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:8pt;\"><span style=\" font-size:9pt; font-weight:600; color:#000000;\">Instrucciones:</span></p></body></html>", 0, QApplication::UnicodeUTF8));
+    botonResolver->setToolTip(QApplication::translate("ClaveClass", "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'MS Shell Dlg 2'; font-size:8.25pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">\302\277Estas listo para aplicar el algoritmo?</p></body></html>", 0, QApplication::UnicodeUTF8));
     botonResolver->setText(QApplication::translate("ClaveClass", "Resolver", 0, QApplication::UnicodeUTF8));
-    label_3->setText(QApplication::translate("ClaveClass", "1. Primero debemos<br>crear un nuevo puzzle,<br>de tama\303\261o N x N con<br>una determinada cantidad<br>de posibles colores", 0, QApplication::UnicodeUTF8));
-    botonAbrir->setText(QApplication::translate("ClaveClass", "&Abrir", 0, QApplication::UnicodeUTF8));
+    label_3->setText(QApplication::translate("ClaveClass", "1. Primero debemos<br>crear un nuevo puzzle,<br>de tama\303\261o N x N con<br>una determinada cantidad<br>de posibles colores. O bien podemos<br>obtenerlo a partir de un archivo.", 0, QApplication::UnicodeUTF8));
+    botonAbrir->setText(QApplication::translate("ClaveClass", "&Abrir tablero", 0, QApplication::UnicodeUTF8));
+    label_7->setText(QApplication::translate("ClaveClass", "<center><img src=\"banner.jpg\"></center>", 0, QApplication::UnicodeUTF8));
     Q_UNUSED(ClaveClass);
     } // retranslateUi
 
