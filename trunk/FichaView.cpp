@@ -45,28 +45,28 @@ QColor FichaView::getColor(int color)
 	switch(color) 
 	{
 	   case 0:return Qt::gray;
-	   case 1:return QColor(128,0,0); //rojo bordo
-	   case 2:return QColor(210,210,0); //amarillo
-	   case 3:return Qt::green;
-	   case 4:return QColor(0,0,160); //azul marino
-	   case 5:return Qt::white;
-	   case 6:return Qt::magenta;
-	   case 7:return Qt::blue;   
-	   case 8:return QColor(255,168,168);
-	   case 9:return QColor(240,0,0);
-	   case 10:return QColor(247,153,172);
-	   case 11:return QColor(154,167,3);
-	   case 12:return QColor(215,254,152);
-	   case 13:return QColor(96,157,2);
-	   case 14:return QColor(108,88,62);
-	   case 15:return QColor(198,176,151);
-	   case 16:return QColor(249,176,209);
-	   case 17:return QColor(170,202,255);
-	   case 18:return QColor(202,255,170);
-	   case 19:return QColor(135,63,3);
-	   case 20:return QColor(28,113,26);
-	   case 21:return QColor(30,77,54);
-	   case 22:return QColor(183,138,200);
+	   case 1:return QColor(255,128,0); //naranja
+	   case 2:return QColor(255,128,255);//rosa
+	   case 3:return QColor(210,0,0);   //bordo
+	   case 4:return QColor(128,190,255); //celeste
+	   case 5:return QColor(0,205,0);//verde
+	   case 6:return QColor(128,0,255); //violeta
+	   case 7:return QColor(255,128,255);//rosa  
+	   case 8:return QColor(10,70,186); //azul
+	   case 9:return QColor(10,70,186); //azul;
+	   case 10:return QColor(128,0,255); //violeta
+	   case 11:return QColor(0,128,64);//verde
+	   case 12:return Qt::yellow;
+	   case 13:return QColor(210,0,0);   //bordo
+	   case 14:return QColor(0,205,0);//verde
+	   case 15:return Qt::yellow;
+	   case 16:return QColor(10,70,186); //azul
+	   case 17:return QColor(255,128,255);//rosa  
+	   case 18:return Qt::yellow;
+	   case 19:return QColor(210,0,0);   //bordo
+	   case 20:return QColor(255,128,0); //naranja
+	   case 21:return Qt::yellow;
+	   case 22:return QColor(10,70,186); //azul
 	   break;
 	   default: 
 	        return Qt::gray;
@@ -79,28 +79,28 @@ QColor FichaView::getSubcolor(int color)
 	switch(color) 
 	{
 	   case 0:return Qt::gray;
-	   case 1:return Qt::yellow;
-	   case 2:return Qt::green;
-	   case 3:return Qt::blue;
-	   case 4:return Qt::white;
-	   case 5:return Qt::white;
-	   case 6:return Qt::blue;
-	   case 7:return Qt::magenta;   
-	   case 8:return QColor(255,168,168);
-	   case 9:return QColor(240,0,0);
-	   case 10:return QColor(247,153,172);
-	   case 11:return QColor(154,167,3);
-	   case 12:return QColor(215,254,152);
-	   case 13:return QColor(96,157,2);
-	   case 14:return QColor(108,88,62);
-	   case 15:return QColor(198,176,151);
-	   case 16:return QColor(249,176,209);
-	   case 17:return QColor(170,202,255);
-	   case 18:return QColor(202,255,170);
-	   case 19:return QColor(135,63,3);
-	   case 20:return QColor(28,113,26);
-	   case 21:return QColor(30,77,54);
-	   case 22:return QColor(183,138,200);
+	   case 1:return QColor(128,190,255); //celeste
+	   case 2:return Qt::yellow;
+	   case 3:return QColor(0,205,0);//verde
+	   case 4:return QColor(255,128,255);//rosa
+	   case 5:return QColor(10,70,186); //azul
+	   case 6:return Qt::yellow;
+	   case 7:return QColor(128,190,255); //celeste 
+	   case 8:return QColor(255,128,0); //naranja
+	   case 9:return Qt::yellow;
+	   case 10:return QColor(128,190,255); //celeste
+	   case 11:return QColor(255,128,0); //naranja
+	   case 12:return QColor(10,70,186); //azul
+	   case 13:return QColor(255,128,0); //naranja
+	   case 14:return QColor(255,128,255); //rosa
+	   case 15:return QColor(0,205,0);//verde
+	   case 16:return QColor(128,190,255); //celeste
+	   case 17:return QColor(0,205,0);//verde
+	   case 18:return QColor(128,190,255); //celeste
+	   case 19:return Qt::yellow;
+	   case 20:return QColor(128,0,255); //violeta
+	   case 21:return QColor(255,128,255); //rosa
+	   case 22:return QColor(255,128,255); //rosa
 	   break;
 	   default: 
 	        return Qt::gray;

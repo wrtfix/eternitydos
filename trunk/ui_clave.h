@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading ui file 'clave.ui'
 **
-** Created: Fri 21. Dec 03:31:28 2007
+** Created: Fri 21. Dec 05:54:50 2007
 **      by: Qt User Interface Compiler version 4.3.3
 **
 ** WARNING! All changes made in this file will be lost when recompiling ui file!
@@ -86,6 +86,7 @@ public:
 
     spinN = new QSpinBox(layoutWidget);
     spinN->setObjectName(QString::fromUtf8("spinN"));
+    spinN->setAccelerated(true);
     spinN->setMinimum(2);
     spinN->setMaximum(16);
     spinN->setValue(3);
@@ -105,6 +106,7 @@ public:
 
     spinCC = new QSpinBox(layoutWidget);
     spinCC->setObjectName(QString::fromUtf8("spinCC"));
+    spinCC->setAccelerated(true);
     spinCC->setMinimum(2);
     spinCC->setMaximum(22);
     spinCC->setValue(2);
